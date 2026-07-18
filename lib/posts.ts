@@ -66,3 +66,18 @@ export function getPostBySlug(slug: string): Post {
     content,
   };
 }
+
+const laoMonths = [
+  "ມັງກອນ", "ກຸມພາ", "ມີນາ", "ເມສາ", "ພຶດສະພາ", "ມິຖຸນາ",
+  "ກໍລະກົດ", "ສິງຫາ", "ກັນຍາ", "ຕຸລາ", "ພະຈິກ", "ທັນວາ",
+];
+
+// ແປງວັນທີຮູບແບບ ISO (ຈາກ frontmatter) ໃຫ້ເປັນຮູບແບບພາສາລາວ ໃຊ້ສະແດງຜົນເທົ່ານັ້ນ
+// ຕົວຢ່າງ: "2026-07-01" → "1 ກໍລະກົດ 2026"
+export function formatLaoDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  const day = date.getDate();
+  const month = laoMonths[date.getMonth()];
+  const year = date.getFullYear();
+  return `${day} ${month} ${year}`;
+}

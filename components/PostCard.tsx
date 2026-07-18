@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { PostMeta } from "@/lib/posts";
+import { formatLaoDate } from "@/lib/posts";
 import { getCategorySlug } from "@/lib/categories";
 
 export default function PostCard({ post }: { post: PostMeta }) {
@@ -38,7 +39,7 @@ export default function PostCard({ post }: { post: PostMeta }) {
         ) : null}
 
         <Link href={`/${post.slug}`} className="block">
-          <p className="text-xs text-ink/40 mb-2">{post.date}</p>
+          <p className="text-xs text-ink/40 mb-2">{formatLaoDate(post.date)}</p>
           <h2 className="text-xl font-lao-serif font-semibold text-ink group-hover:text-gold transition-colors mb-2">
             {post.title}
           </h2>

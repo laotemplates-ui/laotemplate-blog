@@ -1,4 +1,4 @@
-import { getAllSlugs, getPostBySlug } from "@/lib/posts";
+import { getAllSlugs, getPostBySlug, formatLaoDate } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { notFound } from "next/navigation";
@@ -77,7 +77,7 @@ export default async function PostPage({ params }: Props) {
   return (
     <main className="max-w-3xl mx-auto px-4 py-16">
       <article>
-        <p className="text-sm text-ink/50 mb-3">{post.date}</p>
+        <p className="text-sm text-ink/50 mb-3">{formatLaoDate(post.date)}</p>
         <h1 className="text-4xl font-lao-serif font-bold mb-8 text-ink leading-tight">
           {post.title}
         </h1>
