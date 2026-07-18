@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   description:
     "ບົດຄວາມ ແລະ ຄຳແນະນຳກ່ຽວກັບການຕະຫຼາດ, SEO ແລະ ການອອກແບບເວັບໄຊ ເພື່ອຊ່ວຍໃຫ້ທຸລະກິດລາວເຕີບໃຫຍ່ອອນລາຍ.",
-  metadataBase: new URL(siteUrl),
   openGraph: {
     title: "Blog ລາວເທັມເພລດ | ແຫຼ່ງລວມຄວາມຮູ້ສຳລັບທຸລະກິດລາວ",
     description:
