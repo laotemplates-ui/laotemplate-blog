@@ -1,26 +1,40 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-ink: #1B1B18;
+  --color-gold: #B8863B;
+  --color-paper: #FCFBF8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-lao-serif: "Noto Serif Lao", "Phetsarath OT", serif;
+  --font-lao-sans: "Noto Sans Lao", "Phetsarath OT", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* ປັບແຕ່ງ prose class ຈາກ Tailwind Typography ໃຫ້ໃຊ້ໂຕນ Ink/Gold ຂອງເຮົາ */
+.prose {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-links: var(--color-gold);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-gold);
+}
+
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-gold) 40%, transparent);
+  transition: text-decoration-color 0.15s;
+}
+
+.prose a:hover {
+  text-decoration-color: var(--color-gold);
+}
+
+.prose h1, .prose h2, .prose h3 {
+  font-family: var(--font-lao-serif);
 }
