@@ -3,7 +3,7 @@ title: "ວິທີເລືອກ Template ເວັບໄຊໃຫ້ເໝ�
 date: "2026-07-10"
 description: "ບໍ່ຮູ້ຈະເລີ່ມຈາກໃສ? ນີ້ຄື 5 ຈຸດສຳຄັນທີ່ຕ້ອງພິຈາລະນາກ່ອນເລືອກ Template ເວັບໄຊ ໃຫ້ທຸລະກິດຂອງທ່ານເບິ່ງເປັນມືອາຊີບ ແລະ ຂາຍໄດ້ຈິງ."
 category: "ອອກແບບເວັບໄຊ"
-image: "/images/why-website-2026.jpg"
+image: "/images/sabaidee-lao-web-design.webp"
 ---
 
 ## ບົດນຳ

@@ -3,7 +3,7 @@ title: "5 ເຫດຜົນທີ່ທຸລະກິດລາວຄວນມ�
 date: "2026-07-01"
 description: "ເວັບໄຊບໍ່ແມ່ນທາງເລືອກອີກຕໍ່ໄປ ແຕ່ເປັນສິ່ງຈຳເປັນສຳລັບທຸລະກິດລາວ. ນີ້ຄື 5 ເຫດຜົນຫຼັກ."
 category: "ການຕະຫຼາດ"
-image: "/images/sabaidee-lao-web-design.webp"
+image: "/images/why-website-2026.jpg"
 ---
 
 ## ບົດນຳ
