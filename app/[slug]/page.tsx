@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
 import ShareButtons from "@/components/ShareButtons";
+import rehypeHighlight from "rehype-highlight";
+import CodeBlock from "@/components/CodeBlock";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -102,9 +104,15 @@ export default async function PostPage({ params }: Props) {
           prose-ul:my-4 prose-ol:my-4
           prose-li:my-1 prose-li:leading-[1.8]"
         >
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeHighlight]}
+            components={{
+              pre: CodeBlock,
+            }}
+          >
             {post.content}
-          </ReactMarkdown>
+      </ReactMarkdown>
         </div>
       </article>
 

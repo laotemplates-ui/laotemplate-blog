@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import "highlight.js/styles/github-dark.css";
 
 @theme {
   --color-ink: #1B1B18;
@@ -15,7 +16,6 @@ body {
   color: var(--color-ink);
 }
 
-/* ປັບແຕ່ງ prose class ຈາກ Tailwind Typography ໃຫ້ໃຊ້ໂຕນ Ink/Gold ຂອງເຮົາ */
 .prose {
   --tw-prose-body: var(--color-ink);
   --tw-prose-headings: var(--color-ink);
@@ -37,4 +37,47 @@ body {
 
 .prose h1, .prose h2, .prose h3 {
   font-family: var(--font-lao-serif);
+}
+
+/* ===== Code block styling — ໃຫ້ເບິ່ງເປັນມືອາຊີບ ===== */
+
+.prose pre {
+  background-color: #0d1117 !important;
+  border-radius: 0.75rem;
+  padding: 1.25rem 4.5rem 1.25rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid rgba(184, 134, 59, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.prose pre code {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  background: none;
+  padding: 0;
+}
+
+/* Inline code (`ຄືແບບນີ້`) — ແຍກ style ຈາກ code block */
+.prose :not(pre) > code {
+  background-color: rgba(184, 134, 59, 0.1);
+  color: var(--color-gold);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: "";
+}
+
+/* Scrollbar ບາງໆ ຕອນ code ຍາວກວ່າກ່ອງ */
+.prose pre::-webkit-scrollbar {
+  height: 6px;
+}
+.prose pre::-webkit-scrollbar-thumb {
+  background-color: rgba(184, 134, 59, 0.4);
+  border-radius: 3px;
 }
