@@ -3,6 +3,7 @@ title: "ວິທີສ້າງແຖບເມນູ (Navbar) ງາມໆ ແ�
 date: "2026-07-19"
 description: "ຄູ່ມືສ້າງ Navbar ແບບ Responsive ດ້ວຍ HTML ແລະ CSS ລ້ວນໆ ໃຫ້ສະແດງຜົນງາມທັງໜ້າຈໍຄອມພິວເຕີ ແລະ ມືຖື."
 category: "ອອກແບບເວັບໄຊ"
+image: "/images/responsive-navbar-html-css.webp"
 ---
 
 ## ບົດນຳ

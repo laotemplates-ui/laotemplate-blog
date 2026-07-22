@@ -3,6 +3,7 @@ title: "ວິທີສ້າງປຸ່ມ Call to Action (CTA) ງາມໆ �
 date: "2026-07-19"
 description: "ສອນວິທີຂຽນໂຄ້ດ HTML ແລະ CSS ເພື່ອສ້າງປຸ່ມກົດທີ່ສວຍງາມ, ທັນສະໄໝ ແລະ ຊ່ວຍເພີ່ມອັດຕາການກົດ (Click-through rate) ໃຫ້ກັບເວັບໄຊຂອງທ່ານ ໂດຍບໍ່ຕ້ອງໃຊ້ Library."
 category: "ອອກແບບເວັບໄຊ"
+image: "/images/how-to-create-cta-button-css.webp"
 ---
 
 ## ບົດນຳ
