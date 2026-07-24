@@ -3,6 +3,7 @@ title: "ວິທີເຮັດປຸ່ມ Scroll to Top ດ້ວຍ HTML, CS
 date: "2026-07-19"
 description: "ຄູ່ມືເຮັດປຸ່ມກັບຄືນເທິງສຸດຂອງໜ້າເວັບ (Scroll to Top) ແບບງ່າຍໆ ດ້ວຍ HTML, CSS ແລະ JavaScript ລ້ວນໆ ບໍ່ຕ້ອງໃຊ້ library ໃດໆ."
 category: "ອອກແບບເວັບໄຊ"
+image: "/images/scroll-to-top-html-css-js.webp"
 ---
 
 ## ບົດນຳ

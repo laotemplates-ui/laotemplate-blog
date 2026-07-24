@@ -3,6 +3,7 @@ title: "ວິທີສ້າງ Footer ງາມໆ ດ້ວຍ HTML ແລະ
 date: "2026-07-20"
 description: "ສອນຂັ້ນຕອນການຂຽນໂຄ້ດ HTML ແລະ CSS ເພື່ອສ້າງ Footer ທີ່ສວຍງາມ, ເບິ່ງເປັນມືອາຊີບ ແລະ ຈັດລຽງຂໍ້ມູນໃຫ້ເປັນລະບຽບ ພ້ອມນຳໄປໃຊ້ກັບເວັບໄຊຈິງໄດ້ທັນທີ."
 category: "ອອກແບບເວັບໄຊ"
+image: "/images/how-to-create-footer-html-css.webp"
 ---
 
 ## ບົດນຳ
