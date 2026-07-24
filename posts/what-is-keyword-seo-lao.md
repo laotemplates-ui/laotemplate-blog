@@ -3,6 +3,7 @@ title: "Keyword ຄືຫຍັງ? ວິທີຄົ້ນຫາຄຳທີ�
 date: "2026-07-20"
 description: "ເຂົ້າໃຈ Keyword ຄືຫຍັງ ແລະ ວິທີຄົ້ນຫາຄຳສັບທີ່ລູກຄ້າໃຊ້ຄົ້ນຫາຈິງ ເພື່ອນຳໄປໃຊ້ເຮັດ SEO ໃຫ້ເວັບໄຊຂອງທ່ານຖືກຄົ້ນເຫັນງ່າຍຂຶ້ນ."
 category: "SEO"
+image: "/images/what-is-keyword-seo-lao.webp"
 ---
 
 ## ບົດນຳ

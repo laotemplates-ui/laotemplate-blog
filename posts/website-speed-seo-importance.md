@@ -3,6 +3,7 @@ title: "ຄວາມໄວເວັບໄຊ ສຳຄັນແນວໃດຕ�
 date: "2026-07-22"
 description: "ເປັນຫຍັງຄວາມໄວຂອງເວັບໄຊຈຶ່ງມີຜົນຕໍ່ອັນດັບ SEO ໃນ Google ພ້ອມວິທີກວດຄວາມໄວເວັບໄຊຂອງທ່ານດ້ວຍເຄື່ອງມືຟຣີ."
 category: "SEO"
+image: "/images/website-speed-seo-importance.webp"
 ---
 
 ## ບົດນຳ
