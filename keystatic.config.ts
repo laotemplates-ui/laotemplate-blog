@@ -14,6 +14,7 @@ export default config({
       slugField: "title",
       path: "posts/*",
       format: { contentField: "content" },
+      columns: ["title", "category", "date"],
       schema: {
         title: fields.slug({
           name: { label: "ຫົວຂໍ້ບົດຄວາມ" },
