@@ -17,6 +17,15 @@ export type Post = PostMeta & {
   content: string;
 };
 
+// ແປງ date ໃຫ້ເປັນ string ຮູບແບບ "YYYY-MM-DD" ສະເໝີ
+// ຮອງຮັບທັງກໍລະນີ frontmatter ໃສ່ວົງຢືມ (string) ແລະ ບໍ່ໃສ່ວົງຢືມ (Date object ຈາກ YAML)
+function normalizeDate(rawDate: unknown): string {
+  if (rawDate instanceof Date) {
+    return rawDate.toISOString().split("T")[0];
+  }
+  return String(rawDate);
+}
+
 // ດຶງລາຍຊື່ບົດຄວາມທັງໝົດ (ໃຊ້ໃນໜ້າ list) — ຮຽງລຳດັບຕາມວັນທີໃໝ່ສຸດກ່ອນ
 export function getAllPosts(): PostMeta[] {
   const fileNames = fs.readdirSync(postsDirectory);
@@ -32,7 +41,7 @@ export function getAllPosts(): PostMeta[] {
       return {
         slug,
         title: data.title,
-        date: data.date,
+        date: normalizeDate(data.date),
         description: data.description,
         category: data.category,
         image: data.image,
@@ -59,7 +68,7 @@ export function getPostBySlug(slug: string): Post {
   return {
     slug,
     title: data.title,
-    date: data.date,
+    date: normalizeDate(data.date),
     description: data.description,
     category: data.category,
     image: data.image,
