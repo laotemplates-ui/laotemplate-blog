@@ -5,7 +5,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     <>
       <Navbar />
       <div className="flex-1">{children}</div>
-      <footer className="border-t border-ink/10 mt-12">
+      <footer className="border-t border-ink/10">
         <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ink/50">
           {/* ... ເນື້ອຫາ footer ເກົ່າຈາກ app/layout.tsx ... */}
           <footer className="border-t border-ink/10 mt-12">

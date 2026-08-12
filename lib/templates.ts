@@ -7,19 +7,19 @@ export type Template = {
 
 export const featuredTemplates: Template[] = [
   {
-    name: "AuraCorp",
+    name: "AuraCorp - ເທັມເພລດດິຈິຕອນເອເຈນຊີ່ພຣີມຽມ ຮອງຮັບພາສາລາວ 100%",
     price: "250,000 ກີບ",
     image: "/images/templates/aura.webp",
     url: "https://laotemplate.com/templates/5954736c-fe44-4d0b-99b9-235f44257c1a",
   },
   {
-    name: "Luxe E-commerce",
+    name: "Luxe - ເທັມເພລດຮ້ານຄ້າອອນລາຍ (E-Commerce) ສະຕາຍລ໌ຫຼູຫຼາ ຮອງຮັບພາສາລາວ 100%",
     price: "250,000 ກີບ",
     image: "/images/templates/luxe.webp",
     url: "https://laotemplate.com/templates/2e0af0a3-2b0f-4439-85e3-0951d5d997c2",
   },
   {
-    name: "LaoBiz",
+    name: "LaoBiz - ເທັມເພລດອົງກອນ ແລະ ທຸລະກິດພຣີມຽມ ຮອງຮັບພາສາລາວ 100%",
     price: "250,000 ກີບ",
     image: "/images/templates/corporate.webp",
     url: "https://laotemplate.com/templates/dc034261-e766-423c-983a-b59b872a3e08",

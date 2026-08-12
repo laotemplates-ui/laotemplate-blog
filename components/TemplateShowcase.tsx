@@ -4,7 +4,7 @@ import { featuredTemplates } from "@/lib/templates";
 export default function TemplateShowcase() {
   return (
     <section className="border-t border-ink/10 bg-ink/[0.02]">
-      <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-4 py-16 2xl:py-20">
+      <div className="max-w-5xl 2xl:max-w-7xl mx-auto px-4 pt-16 2xl:pt-20 pb-12 2xl:pb-16">
         <div className="text-center mb-10">
           <span className="inline-block text-xs font-medium text-gold bg-gold/10 px-4 py-1.5 rounded-full mb-4">
             Template ຂອງພວກເຮົາ
