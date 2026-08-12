@@ -108,3 +108,36 @@ export function getPostsPage(page: number, perPage: number = POSTS_PER_PAGE) {
     totalPosts,
   };
 }
+
+// ==========================================
+// --- ຟັງຊັນໃໝ່ທີ່ເພີ່ມເຂົ້າມາ ---
+// ==========================================
+
+// ຄິດໄລ່ເວລາອ່ານໂດຍປະມານ (ນາທີ) ຈາກຄວາມຍາວເນື້ອຫາ
+export function getReadingTime(content: string): number {
+  const plainText = content
+    .replace(/```[\s\S]*?```/g, "") // ຕັດ code block ອອກ (ບໍ່ນັບເປັນເນື້ອຫາອ່ານ)
+    .replace(/`[^`]*`/g, "") // ຕັດ inline code
+    .replace(/!\[.*?\]\(.*?\)/g, "") // ຕັດ markdown image syntax
+    .replace(/\[.*?\]\(.*?\)/g, "") // ຕັດ markdown link syntax
+    .replace(/[#>*_~-]/g, "") // ຕັດເຄື່ອງໝາຍ Markdown
+    .trim();
+
+  const CHARS_PER_MINUTE = 500; // ຄວາມໄວອ່ານພາສາລາວໂດຍປະມານ
+  const minutes = Math.ceil(plainText.length / CHARS_PER_MINUTE);
+  return Math.max(1, minutes);
+}
+
+// ດຶງບົດຄວາມທີ່ກ່ຽວຂ້ອງ (ໝວດໝູ່ດຽວກັນ, ບໍ່ນັບບົດຄວາມປັດຈຸບັນ)
+export function getRelatedPosts(
+  currentSlug: string,
+  category: string | undefined,
+  limit: number = 3
+): PostMeta[] {
+  if (!category) return [];
+
+  const allPosts = getAllPosts();
+  return allPosts
+    .filter((post) => post.slug !== currentSlug && post.category === category)
+    .slice(0, limit);
+}

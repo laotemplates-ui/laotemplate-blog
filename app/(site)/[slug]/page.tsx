@@ -1,4 +1,10 @@
-import { getAllSlugs, getPostBySlug, formatLaoDate } from "@/lib/posts";
+import {
+  getAllSlugs,
+  getPostBySlug,
+  formatLaoDate,
+  getReadingTime,
+  getRelatedPosts,
+} from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkHighlight from "rehype-highlight";
@@ -8,6 +14,7 @@ import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
 import ShareButtons from "@/components/ShareButtons";
 import CodeBlock from "@/components/CodeBlock";
+import RelatedPosts from "@/components/RelatedPosts";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -73,11 +80,15 @@ export default async function PostPage({ params }: Props) {
 
   const post = getPostBySlug(slug);
   const postUrl = `https://blog.laotemplate.com/${slug}`;
+  const readingTime = getReadingTime(post.content);
+  const relatedPosts = getRelatedPosts(slug, post.category);
 
   return (
     <main className="max-w-4xl 2xl:max-w-5xl mx-auto px-4 py-16">
       <article>
-        <p className="text-sm 2xl:text-base text-ink/50 mb-3">{formatLaoDate(post.date)}</p>
+        <p className="text-sm 2xl:text-base text-ink/50 mb-3">
+          {formatLaoDate(post.date)} · ອ່ານປະມານ {readingTime} ນາທີ
+        </p>
         <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-lao-serif font-bold mb-8 text-ink leading-tight">
           {post.title}
         </h1>
@@ -89,7 +100,6 @@ export default async function PostPage({ params }: Props) {
               alt={post.title}
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 1024px"
               className="object-cover"
             />
           </div>
@@ -120,6 +130,8 @@ export default async function PostPage({ params }: Props) {
       <div className="mt-8">
         <CallToAction />
       </div>
+
+      <RelatedPosts posts={relatedPosts} />
     </main>
   );
 }
