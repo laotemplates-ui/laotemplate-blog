@@ -2,6 +2,7 @@ import { getAllPosts, getPostsPage } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 import Hero from "@/components/Hero";
 import Pagination from "@/components/Pagination";
+import TemplateShowcase from "@/components/TemplateShowcase";
 
 export const metadata = {
   title: "ບົດຄວາມທັງໝົດ",
@@ -25,6 +26,8 @@ export default function HomePage() {
 
         <Pagination currentPage={currentPage} totalPages={totalPages} />
       </main>
+
+      <TemplateShowcase />
     </>
   );
 }
