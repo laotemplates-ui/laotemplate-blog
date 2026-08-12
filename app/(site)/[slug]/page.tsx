@@ -1,25 +1,23 @@
 import { getAllSlugs, getPostBySlug, formatLaoDate } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkHighlight from "rehype-highlight";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import CallToAction from "@/components/CallToAction";
 import ShareButtons from "@/components/ShareButtons";
-import rehypeHighlight from "rehype-highlight";
 import CodeBlock from "@/components/CodeBlock";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-// ບອກ Next.js ວ່າຕ້ອງ build ໜ້າໃດແດ່ລ່ວງໜ້າ (Static Site Generation)
 export function generateStaticParams() {
   const slugs = getAllSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
-// ບອກ Next.js ວ່າ metadata (title, description, Open Graph) ຂອງແຕ່ລະໜ້າຄືຫຍັງ
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const slugs = getAllSlugs();
@@ -77,10 +75,10 @@ export default async function PostPage({ params }: Props) {
   const postUrl = `https://blog.laotemplate.com/${slug}`;
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-16">
+    <main className="max-w-4xl mx-auto px-4 py-16">
       <article>
         <p className="text-sm text-ink/50 mb-3">{formatLaoDate(post.date)}</p>
-        <h1 className="text-4xl font-lao-serif font-bold mb-8 text-ink leading-tight">
+        <h1 className="text-4xl md:text-5xl font-lao-serif font-bold mb-8 text-ink leading-tight">
           {post.title}
         </h1>
 
@@ -97,22 +95,20 @@ export default async function PostPage({ params }: Props) {
         ) : null}
 
         <div
-          className="prose prose-lg max-w-none
+          className="prose prose-xl max-w-none
           prose-headings:mt-8 prose-headings:mb-4
           prose-h1:mt-0 prose-h1:mb-6
           prose-p:my-4 prose-p:leading-[1.8]
           prose-ul:my-4 prose-ol:my-4
           prose-li:my-1 prose-li:leading-[1.8]"
         >
-        <ReactMarkdown
+          <ReactMarkdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeHighlight]}
-            components={{
-              pre: CodeBlock,
-            }}
+            rehypePlugins={[remarkHighlight]}
+            components={{ pre: CodeBlock }}
           >
             {post.content}
-      </ReactMarkdown>
+          </ReactMarkdown>
         </div>
       </article>
 
