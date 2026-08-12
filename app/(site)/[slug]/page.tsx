@@ -75,10 +75,10 @@ export default async function PostPage({ params }: Props) {
   const postUrl = `https://blog.laotemplate.com/${slug}`;
 
   return (
-    <main className="max-w-4xl mx-auto px-4 py-16">
+    <main className="max-w-4xl 2xl:max-w-5xl mx-auto px-4 py-16">
       <article>
-        <p className="text-sm text-ink/50 mb-3">{formatLaoDate(post.date)}</p>
-        <h1 className="text-4xl md:text-5xl font-lao-serif font-bold mb-8 text-ink leading-tight">
+        <p className="text-sm 2xl:text-base text-ink/50 mb-3">{formatLaoDate(post.date)}</p>
+        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-lao-serif font-bold mb-8 text-ink leading-tight">
           {post.title}
         </h1>
 
@@ -89,13 +89,14 @@ export default async function PostPage({ params }: Props) {
               alt={post.title}
               fill
               priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
               className="object-cover"
             />
           </div>
         ) : null}
 
         <div
-          className="prose prose-xl max-w-none
+          className="prose prose-xl 2xl:prose-2xl max-w-none
           prose-headings:mt-8 prose-headings:mb-4
           prose-h1:mt-0 prose-h1:mb-6
           prose-p:my-4 prose-p:leading-[1.8]

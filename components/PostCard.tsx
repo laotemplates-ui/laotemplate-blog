@@ -16,34 +16,35 @@ export default function PostCard({ post }: { post: PostMeta }) {
               src={post.image}
               alt={post.title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           </div>
         ) : null}
       </Link>
 
-      <div className="p-6">
+      <div className="p-6 2xl:p-8">
         {post.category ? (
           categorySlug ? (
             <Link
               href={`/category/${categorySlug}`}
-              className="relative z-10 inline-block text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full mb-3 hover:bg-gold/20 transition-colors"
+              className="relative z-10 inline-block text-xs 2xl:text-sm font-medium text-gold bg-gold/10 px-3 py-1 rounded-full mb-3 hover:bg-gold/20 transition-colors"
             >
               {post.category}
             </Link>
           ) : (
-            <span className="inline-block text-xs font-medium text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
+            <span className="inline-block text-xs 2xl:text-sm font-medium text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
               {post.category}
             </span>
           )
         ) : null}
 
         <Link href={`/${post.slug}`} className="block">
-          <p className="text-xs text-ink/40 mb-2">{formatLaoDate(post.date)}</p>
-          <h2 className="text-xl font-lao-serif font-semibold text-ink group-hover:text-gold transition-colors mb-2">
+          <p className="text-xs 2xl:text-sm text-ink/40 mb-2">{formatLaoDate(post.date)}</p>
+          <h2 className="text-xl 2xl:text-2xl font-lao-serif font-semibold text-ink group-hover:text-gold transition-colors mb-2">
             {post.title}
           </h2>
-          <p className="text-sm text-ink/70 line-clamp-3">
+          <p className="text-sm 2xl:text-base text-ink/70 line-clamp-3">
             {post.description}
           </p>
         </Link>

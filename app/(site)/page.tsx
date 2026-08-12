@@ -14,8 +14,8 @@ export default function HomePage() {
     <>
       <Hero postCount={posts.length} />
 
-      <main className="max-w-5xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <main className="max-w-5xl 2xl:max-w-7xl mx-auto px-4 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 2xl:gap-10">
           {posts.map((post) => (
             <PostCard key={post.slug} post={post} />
           ))}

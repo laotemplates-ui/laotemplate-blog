@@ -11,16 +11,16 @@ export default function Hero({ postCount }: Props) {
       <div className="absolute -top-24 -right-24 w-72 h-72 bg-gold/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-24 -left-24 w-72 h-72 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-5xl mx-auto px-4 py-20 text-center">
+      <div className="relative max-w-5xl 2xl:max-w-6xl mx-auto px-4 py-20 2xl:py-28 text-center">
         <span className="inline-block text-xs font-medium text-gold bg-gold/10 px-4 py-1.5 rounded-full mb-6">
           {postCount}+ ບົດຄວາມ ແລະ ນັບມື້ນັບຫຼາຍຂຶ້ນ
         </span>
 
-        <h1 className="text-4xl md:text-5xl font-lao-serif font-bold text-ink mb-5 leading-tight">
+        <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-lao-serif font-bold text-ink mb-5 leading-tight">
           ແຫຼ່ງລວມຄວາມຮູ້ສຳລັບທຸລະກິດລາວ
         </h1>
 
-        <p className="text-lg text-ink/60 max-w-2xl mx-auto mb-10">
+        <p className="text-lg 2xl:text-xl text-ink/60 max-w-2xl 2xl:max-w-3xl mx-auto mb-10">
           ອັບເດດເທັກນິກການຕະຫຼາດ, SEO ແລະ ການອອກແບບເວັບໄຊ
           ເພື່ອເພີ່ມຍອດຂາຍໃຫ້ທຸລະກິດຂອງທ່ານ
         </p>
