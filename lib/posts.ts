@@ -90,3 +90,21 @@ export function formatLaoDate(dateStr: string): string {
   const year = date.getFullYear();
   return `${day} ${month} ${year}`;
 }
+
+// --- ເພີ່ມໃໝ່: ລະບົບແບ່ງໜ້າ (Pagination) ---
+export const POSTS_PER_PAGE = 9;
+
+export function getPostsPage(page: number, perPage: number = POSTS_PER_PAGE) {
+  const allPosts = getAllPosts();
+  const totalPosts = allPosts.length;
+  const totalPages = Math.max(1, Math.ceil(totalPosts / perPage));
+  const currentPage = Math.min(Math.max(1, page), totalPages);
+  const start = (currentPage - 1) * perPage;
+
+  return {
+    posts: allPosts.slice(start, start + perPage),
+    totalPages,
+    currentPage,
+    totalPosts,
+  };
+}
